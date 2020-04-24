@@ -1,4 +1,4 @@
- ** Yapay Zeka ve Makina Öğrenmesi **
+ **Yapay Zeka ve Makina Öğrenmesi **
 
 Yapay Zaka nedir?   |   Tarihi tarafı  |  Günümüzde geldiği yer |  Makina Öğrenmesi ile bağlantısı
 

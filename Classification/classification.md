@@ -1,3 +1,5 @@
+# Denetimli Öğrenme (Supervised Learning)
+
 *Denetimli Öğrenme Nedir?* | *Alt tipleri var mıdır?*| *Hangi matematiksel modeller ile yapılır?* | *Algoritmalarını nasıl kullanırım*
 
 
@@ -18,6 +20,7 @@ Ayak Sayısı | Gaga | Bıyık | Hayvan
 Yine etiketli yani hangi hayvan olduğunu bildiğimiz bir veri seti ile de 
 
 Ayak Sayısı | Gaga | Bıyık| Hayvan
+------------|------|-------|-------
 4|0|1|Kedi
 2|1|0|Kuş
 

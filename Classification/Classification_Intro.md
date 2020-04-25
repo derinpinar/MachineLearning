@@ -1,3 +1,5 @@
+# Denetimli Öğrenme (Supervised Learning)
+
 *Denetimli Öğrenme Nedir?* | *Alt tipleri var mıdır?*| *Hangi matematiksel modeller ile yapılır?* | *Algoritmalarını nasıl kullanırım*
 
 
@@ -18,6 +20,7 @@ Ayak Sayısı | Gaga | Bıyık | Hayvan
 Yine etiketli yani hangi hayvan olduğunu bildiğimiz bir veri seti ile de 
 
 Ayak Sayısı | Gaga | Bıyık| Hayvan
+------------|------|-------|-------
 4|0|1|Kedi
 2|1|0|Kuş
 
@@ -26,7 +29,7 @@ Ayak Sayısı | Gaga | Bıyık| Hayvan
 daha sonra modele 2 ayaklı 1 gagalı 0 bıyıklı verisini verdiğimizde model artık bizim için tahminlemeye başlamakta fakat 3 ayaklı 1 gaga ve 1 bıyıklı dersek ne olacak ? Cevabı kullanılan yönteme göre değişir bu yöntemlerin neler olduğuna bakacağız. 
 Not: Yukarda bahsi geçen örnek denetimli sınıflandırma içindir.
 
-![](images/supervisedlearning.png)
+![](../images/supervisedlearning.png)
 
 
 **Sınıflandırma Yöntemi (Classification Method)**

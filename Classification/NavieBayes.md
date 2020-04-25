@@ -6,7 +6,7 @@ Naïve Bayes sınıflandırmasında sisteme belirli bir oranda öğretilmiş ver
 
 Naïve Bayes sınıflandırma yönteminin birçok kullanım alanı bulunabilir fakat, burada neyin sınıflandırıldığından çok nasıl sınıflandırıldığı önemli. Yani öğretilecek veriler binary veya text veriler olabilir, burada veri tipinden ve ne olduğundan ziyade, bu veriler arasında nasıl bir oransal ilişki kurduğumuz önem kazanıyor.
 
-Matematiksel İfade:
+**Matematiksel İfade:**
 
 Bayes Teoremi
 
@@ -124,9 +124,9 @@ p(maaş|mimar) = Burada koşullu olasılık hesaplamak için dağılımları hes
 
  değeri hesaplanır.
 
- ###### (σ² değeri 4.91E6² olarak daha önce hesaplanan mimar varyans maaş değeridir.
- ###### x değeri 3000 olarak bizim tahminlenmesini istediğimizi maaş değeridir.
- ###### µ değeri daha önce hesaplanan ortalama mimar maaşıdır.)
+###### σ² değeri 4.91E6² olarak daha önce hesaplanan mimar varyans maaş değeridir.
+###### x değeri 3000 olarak bizim tahminlenmesini istediğimizi maaş değeridir.
+###### µ değeri daha önce hesaplanan ortalama mimar maaşıdır.)
 
 maaş mimar koşullu olasılığında 3000 lira maaşın mimar olma olasılığı  0.0000000687 olduğunu bulduk. başka bir deyişle bu kişi mimar ise (verilen koşul bu olsun) maaşının 3000 lira olma durumunu hesapladık.
 
@@ -154,9 +154,11 @@ beklenti olasılıklarına bakarak  3000 maaş, 30 yaş, 5 yıl tecrübe sahibi
 
 Yani naive bayes sınıflandırma modeli bu kişiyi müzisyen sınıfına atamaktadır.
 
+##Python
 
 
-Kaynaklar
+
+##Kaynaklar
 http://bilgisayarkavramlari.sadievrenseker.com/2013/02/08/naif-bayes-siniflandiricisi-naive-bayes/
 https://acemiadam.com/orneklemin-standart-sapmasinin-hesaplanmasi
 

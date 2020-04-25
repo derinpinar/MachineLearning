@@ -12,25 +12,25 @@ Bayes Teoremi
 
 Bu teorem bir rassal değişken için koşullu olasılıklar ile önsel (marjinal) olasılıklar arasındaki ilişkiyi gösterir.
 
-![]
+![](../images/bayes1.png)
 
-P(A|B) : B olayı gerçekleştiği durumda A olayının meydana gelme olasılığı
+###### P(A|B) : B olayı gerçekleştiği durumda A olayının meydana gelme olasılığı
+###### P(B|A) ; A olayı gerçekleştiği durumda B olayının meydana gelme olasılığı
+###### P(A) ve P(B) : A ve B olaylarının önsel olasılıklarıdır.
 
-P(B|A) ; A olayı gerçekleştiği durumda B olayının meydana gelme olasılığı
-
-P(A) ve P(B) : A ve B olaylarının önsel olasılıklarıdır.
 ------
 
 **Naive Bayes Sınıflandırma Modeli**
 
 Bir sınıflandırma problemi bir çok özellikten ve bir sonuç (hedef) değişkeninden oluşur.
 
-![]
+![](../images/bayes2.png)
 
 C verilen hedef ve F özelliklerimiz temsil eder. Naive bayes sınıflandırıcı basitçe bütün koşullu olasılıkların çarpımıdır.
+
 ------
 
-Basit Örnek
+**Basit Örnek**
 
 | Meslek     | Maaş | Yaş | Tecrübe |
 |------------|------|-----|---------|
@@ -52,31 +52,31 @@ Bu eğitim verisi ile naive bayes algoritması bize 3000 maaş, 30 yaş, 5 yıl 
 
 >Ortalama = (n1+n2+n3+..nx)/x  değeridir. Yani bir serideki tüm sayıların toplanıp kaç adet sayı varsa ona bölümüdür.
 >Varyans = Verilerin ortalamadan sapmasının karelerinin toplamının veri sayısına bölümüdür. 
->* Standart Sapma = Verilerin ortalamadan sapmasının karelerinin toplamının karekök alınmış halidir.
->* Kovaryans = iki değişken arasındaki doğrusal ilişkinin değişkenliğini ölçen bir kavramdır. Yani iki serinin dağılımının benzerliğini analiz ettiğimiz bir ölçüdür.
+>Standart Sapma = Verilerin ortalamadan sapmasının karelerinin toplamının karekök alınmış halidir.
+>Kovaryans = iki değişken arasındaki doğrusal ilişkinin değişkenliğini ölçen bir kavramdır. Yani iki serinin dağılımının benzerliğini analiz ettiğimiz bir ölçüdür.
 
 
-
-
-![]
-
+![](../images/bayes3.png)
 
 Örnek Mimar Maaş Varyans değeri hesabı = ( (3000-4250)2 +(5000-4250)2 +(2000-4250)2 + (7000-4250)2 ) / 4-1 =4916666,667
 
 Örneklem Varyans Formülü 
+
 -------
 
 Burada varyans formülü aslında standart sapmanın karesidir yani varyansın karekökü standart sapmayı verecektir fakat bu tüm deney popülasyonunun varyansını bulmaya çalıştığımızda geçerli bir örneklemin varyansını alacağımız zaman "n" e değil "n-1" e bölünmesi gerekmektedir. Örneğin 100 satırlık ortalama maaş verimiz var. 
 Bu verinin varyansı 
 
-![]
+![](../images/bayes4.png)
 
 formülü ile hesaplanırken içinden 10 tane örneklemin varyansı 
 
-![]
+![](../images/bayes5.png)
 
 ile hesaplanmaktadır. Bunun mantığı Bassel's Correction' a dayanır.
-![]
+![](../images/bayes6.png)
+
+![](../images/bayes7.png)
 
 Yukarıdaki grafiği anlamaya çalışalım. Dediğimiz gibi 100 tane deney yaptık. Bunun grafiğini kolay anlaşılsın diye simetrik çizmeye çalıştım. Deney sayı olarak en az 0 ve en çok 4.000.000 çıkıyor. Ortalaması 999.999 oluyor. Standart sapmanın mantığını anlamak için bir doğruda bu deney sonuçlarını gösterip 10 tane örneklem alalım.
 
@@ -89,6 +89,8 @@ Bir popülasyonu tahmin etmek için kullanılan örneklem verisine estimator(tah
 100 lük veriyi 10'ar 10'ar varyanslarını aldığınızda toplam veri ile aldığınız varyans toplamı birbirine eşit olmuyor bu eşitliği 10'ar lık varyans formülünü n/n-1 ile çarptığınızda eşitlik sağlanıyor.                  
 Bu örneklem varyansındaki mantık da budur. Örneğin excel'de var.p ve var.s olarak iki fonksiyon vardır var.p populasyon var.s ile örneklem varyansını vermektedir.
 
+-------
+
 | Meslek   | Ortalama Maaş | Ort. Yaş | Ort. Tecrübe | Varyans Maaş | Varyans Yaş | Varyans Tecrübe |
 |----------|---------------|----------|--------------|--------------|-------------|-----------------|
 | Mimar    | 4250          | 26.25    | 5            | 4916666,667  | 20,25       | 8,666678        |
@@ -96,41 +98,41 @@ Bu örneklem varyansındaki mantık da budur. Örneğin excel'de var.p ve var.s 
 
 Elde ettiğimiz tablo mesleklerin maaş yaş ve tecrübe özet bilgilerini vermekte peki naive bayes test verimizin hangi meslekten olacağına nasıl karar verecek? Naive bayes sınıflandırıcısı bütün koşulların olasılıklarının çarpımıdır.
 
-![]
+![](../images/bayes8.png)
 
 bu formülde görüldüğü gibi s1 den sn'e kadar olan sınıflar arasından bir seçim yapılırken aslında bu sınıfın olasılık değeri ve bu sınıfları yerine getiren k koşulları için çarpımından bir farkı yoktur.
 
 Yani aşağıdaki formüllerde görüldüğü gibi bir kişinin mimar olduğunu anlamak için önce mimarların oranını buluyoruz. "P(mimar)", ardından mimarlar için verilen maaş,yaş,tecrübeye göre koşullu olasılıklarını bulup bunu normalleştirme değerine bölüyoruz. Aynısını müzisyen içinde hesaplanır.
 
-![]
+![](../images/bayes9.png)
 
-![]
+![](../images/bayes10.png)
 
-* normalleştirme değeri aşağıdaki formül ile hesaplanır. Bu örnekte iki sınıf olduğu için normalleştirme değerini göz ardı edebiliriz. *
-* normalleştirme = P(mimar) p(maaş | mimar) p (Yaş | mimar) p (iş tecrübesi | mimar) + {P(müzisyen) p(maaş | müzisyen) p (Yaş | müzisyen) p (iş tecrübesi | müzisyen) *
+###### normalleştirme değeri aşağıdaki formül ile hesaplanır. Bu örnekte iki sınıf olduğu için normalleştirme değerini göz ardı edebiliriz.
+###### normalleştirme = P(mimar) p(maaş | mimar) p (Yaş | mimar) p (iş tecrübesi | mimar) + {P(müzisyen) p(maaş | müzisyen) p (Yaş | müzisyen) p (iş tecrübesi | müzisyen)
 
 
 öncelikle beklenti(mimar) değerini hesaplayalım.
 p(mimar) = 4/8 = 0.5
 p(maaş|mimar) = Burada koşullu olasılık hesaplamak için dağılımları hesaplanmalıdır. Birkaç dağılım hesaplama yöntemi vardır. Burada normal (gauss) dağılımı kullanılacaktır. Diğer dağılımlar: Ki-Kare, t-dağılımı, F dağılımıdır.
 
-![]
+![](../images/bayes11.png)
 
  gauss dağılım formülü kullanılarak;
 
-![]
+![](../images/bayes12.png)
 
  değeri hesaplanır.
 
- *( σ² değeri 4.91E6² olarak daha önce hesaplanan mimar varyans maaş değeridir.*
- *x değeri 3000 olarak bizim tahminlenmesini istediğimizi maaş değeridir.*
-* µ değeri daha önce hesaplanan ortalama mimar maaşıdır.)*
+ ###### (σ² değeri 4.91E6² olarak daha önce hesaplanan mimar varyans maaş değeridir.
+ ###### x değeri 3000 olarak bizim tahminlenmesini istediğimizi maaş değeridir.
+ ###### µ değeri daha önce hesaplanan ortalama mimar maaşıdır.)
 
 maaş mimar koşullu olasılığında 3000 lira maaşın mimar olma olasılığı  0.0000000687 olduğunu bulduk. başka bir deyişle bu kişi mimar ise (verilen koşul bu olsun) maaşının 3000 lira olma durumunu hesapladık.
 
 şimdi bu maaş değeri için muzisyen mesleğinde olma olasılığını hesaplayalım.
 
-![]
+![](../images/bayes13.png)
 
 (3000 maaş ile müzisyen (8.11E-8) olasılığı mimar (6.84E-8) olasılığına göre daha fazla olduğu görülmektedir.)
 
@@ -145,18 +147,17 @@ Diğer koşullu olasılıkları da aynı şekilde hesaplarsak aşağıdaki tablo
 
 Bu hesaplamaar sonucunda yazının başında belirtilen beklenti(mimar) ve bekleni(muzisyen) değerleri hesaplanır.
 
-![]
-![]
+![](../images/bayes14.png)
+![](../images/bayes15.png)
 
 beklenti olasılıklarına bakarak  3000 maaş, 30 yaş, 5 yıl tecrübe sahibi bir kişinin mimar - müzisyen meslekleri arasından müzisyen 20 kat daha kuvvetli olasılıktadır. 
 
 Yani naive bayes sınıflandırma modeli bu kişiyi müzisyen sınıfına atamaktadır.
 
 
+
 Kaynaklar
-
 http://bilgisayarkavramlari.sadievrenseker.com/2013/02/08/naif-bayes-siniflandiricisi-naive-bayes/
-
 https://acemiadam.com/orneklemin-standart-sapmasinin-hesaplanmasi
 
 

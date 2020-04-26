@@ -51,8 +51,8 @@ Bu eğitim verisi ile naive bayes algoritması bize 3000 maaş, 30 yaş, 5 yıl 
 
 
 >Ortalama = (n1+n2+n3+..nx)/x  değeridir. Yani bir serideki tüm sayıların toplanıp kaç adet sayı varsa ona bölümüdür.
->Varyans = Verilerin ortalamadan sapmasının karelerinin toplamının veri sayısına bölümüdür. 
->Standart Sapma = Verilerin ortalamadan sapmasının karelerinin toplamının karekök alınmış halidir.
+>Varyans = Verilerin ortalamadan sapmasının karelerinin toplamının veri sayısına bölümüdür.                         
+>Standart Sapma = Verilerin ortalamadan sapmasının karelerinin toplamının karekök alınmış halidir.                    
 >Kovaryans = iki değişken arasındaki doğrusal ilişkinin değişkenliğini ölçen bir kavramdır. Yani iki serinin dağılımının benzerliğini analiz ettiğimiz bir ölçüdür.
 
 
@@ -154,11 +154,9 @@ beklenti olasılıklarına bakarak  3000 maaş, 30 yaş, 5 yıl tecrübe sahibi
 
 Yani naive bayes sınıflandırma modeli bu kişiyi müzisyen sınıfına atamaktadır.
 
-##Python
 
+## Kaynaklar
 
-
-##Kaynaklar
 http://bilgisayarkavramlari.sadievrenseker.com/2013/02/08/naif-bayes-siniflandiricisi-naive-bayes/
 https://acemiadam.com/orneklemin-standart-sapmasinin-hesaplanmasi
 

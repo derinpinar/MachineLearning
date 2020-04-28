@@ -1,4 +1,4 @@
-#Supervised Classification K-Nearest Neighbours
+# Supervised Classification K-Nearest Neighbours
 
 KNN algoritmaları, 1967 yılında T. M. Cover ve P. E. Hart tarafından önerilmiştir. En yakın komşuluk sınıflandırması sırasında çıkarılan özelliklerden (feature extraction) sınıfı tahmin edilecek olan örneğin sınıfı bilinen en yakın k tane örneğe bakılarak sınıflandırılmasıdır. 
 En yakın örnekler 
@@ -18,7 +18,7 @@ Bunu K=3 yani en yakın 3 komşuya bakarak yapılmasını istediğimizde aşağ
 
 Sırası ile ilk görselde sınıflandırılacak örnek uzaydaki konumunu alır, ikinci görselde en yakın 3 komşusunu bulur ve en çok olan komuşusu kimse örnekte o sınıfa atanır.
 
-##Matematiksel İfade:
+## Matematiksel İfade:
 
 En yakın komuşuluk mesafe hesabında genellikle öklid mesafesi kullanılır.
 
@@ -43,7 +43,7 @@ Minkowski mesafesi 
  Öklid uzayı'nda bir metrik'tir iki Öklidyen mesafesi ve Manhattan mesafesi'nin bir genelleştirilmesi ile oluşturulur.
 
 
-##Basit Örnek
+## Basit Örnek
 
 |Feature1|Feature2|Sınıf|
 |--------|--------|-----|
@@ -88,8 +88,7 @@ Bu sebeple K değerini genellikle tek sayı vermek algoritmayı bu seçimden kur
 
 ---------
 
-
-kNN için önemli konu eğitim kümesinin büyüklüğü ve seçilecek k değeridir. k değeri seçerken test yapılmalı ve başarısı yüksek olan k değerine ulaşılmalıdır. Bu da farkl veri setleri kullanılarak yaplacak testler ile belirlenir.  Bunun için python kısmında Gridsearch Validation gibi hiper parametre seçme algoritmalarını incelemek gerekmekte. kNN in kötü tarafı ise her bir eklemede uzaklıkların hesaplanmasıdır bu büyük verilerde yavaşlığa yol açabilir.
+###### kNN için önemli konu eğitim kümesinin büyüklüğü ve seçilecek k değeridir. k değeri seçerken test yapılmalı ve başarısı yüksek olan k değerine ulaşılmalıdır. Bu da farkl veri setleri kullanılarak yaplacak testler ile belirlenir.  Bunun için python kısmında Gridsearch Validation gibi hiper parametre seçme algoritmalarını incelemek gerekmekte. kNN in kötü tarafı ise her bir eklemede uzaklıkların hesaplanmasıdır bu büyük verilerde yavaşlığa yol açabilir.
 
 
 

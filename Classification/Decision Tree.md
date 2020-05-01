@@ -67,6 +67,7 @@ E(FutbolOyna) =   0.643 * log2 (0.643) +  0.357 * log2 (0.357)  =  0.940
 Entropi sadece hedef üzerine hesaplanmaz. Ayrıca özellikler üzerine entropi hesaplanabilir. Fakat özellikler üzerine entropi hesaplanırken hedefte göz önüne alır. Bu durumda entropi formülü:
 
 ![](../images/decisiontree6.png)
+
 ![](../images/decisiontree7.png)
 
 ###### P(c) =olasılık, E (c) = Entropi
@@ -122,6 +123,7 @@ Bulutlu değerleri ve karar ağacımız aşağıdaki gibidir:
 İlk olarak hava durumu güneşli olan durumlar seçilir ve information gain hesaplanır.
 
 ![](../images/decisiontree13.png)
+
 ![](../images/decisiontree14.png)
 ![](../images/decisiontree15.png)
 ![](../images/decisiontree16.png)

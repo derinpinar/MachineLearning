@@ -86,8 +86,10 @@ Diğer özelliklerin de entropi değerleri aynı formüller uygulanarak hesaplan
 ![](../images/decisiontree9.png)
 ![](../images/decisiontree10.png)
 
-E(FutbolOyna, Nem) = P(Yüksek)*E(3,4)+P(Normal)*E(6,1) = 0.788       
-E(FutbolOyna, Rüzgar) = P(Yok)*E(6,2)+P(Var)*E(3,3) =0.892 
+E(FutbolOyna, Nem) = P(Yüksek)*E(3,4)+P(Normal)*E(6,1) = 0.788
+       
+E(FutbolOyna, Rüzgar) = P(Yok)*E(6,2)+P(Var)*E(3,3) =0.892
+ 
 E(FutbolOyna, Sıcaklık) = P(Sıcak)* E(2,2) + P(Ilık)*E(4,2) + P(Soğuk)*E(3,1) = 0.911
 
 **2-Bilgi Kazanımı:**
@@ -106,8 +108,11 @@ Yukarıdaki formülde E(FutbolOyna) ilk hesapladığımız hedef entropi idi  E(
 Diğer feature lar da aynı formüle uygulanırsa aşağıdaki değerler elde edilir.
 
 Gain(FutbolOyna, HavaDurumu) = 0.940 – 0.694 = 0.247
+
 Gain(FutbolOyna, Nem) = 0.940 – 0.788 = 0.152
+
 Gain(FutbolOyna, Sıcaklık) = 0.940 – 0.911 = 0.029
+
 Gain(FutbolOyna, Rüzgar) = 0.940 – 0.892 = 0.048
 
 Gain(FutbolOyna, HavaDurumu) özelliği en yüksek information gain değerine sahiptir. 
@@ -130,11 +135,13 @@ Bulutlu değerleri ve karar ağacımız aşağıdaki gibidir:
 
 **Güneşli durumu** için Futbol Oyna entropisi ile  Futbol Oyna; Sıcaklık,Nem, Rüzgar entropileri aşağıdaki şekilde hesaplanarak bilgi kazançları bulunur.
 
-![](../images/decisiontree17.png)
+![](../images/decisiontree17.jpg)
 
 Gain(FutbolOyna, Sıcaklık)  = 0.971 – 0.9508 = 0.0202
+
 Gain(FutbolOyna, Nem)      = 0.971 - 0.9508 = 0.0202
-Gain(FutbolOyna, Rüzgar)  = 0.971 - 0          = 0.971
+
+Gain(FutbolOyna, Rüzgar)  = 0.971 - 0 = 0.971
 
 Hesaplama sonucunda bilgi Kazancı en yüksek feature olarak 0.971 ile Rüzgar iç düğüm olarak seçilmektedir. 
 Rüzgar iç düğümünün dalları Var, Yok olarak atanır. 
@@ -149,8 +156,8 @@ Yağmurlu durumu içinde güneşli durumunda olduğu gibi entropi ve bilgi kazan
 
 ![](../images/decisiontree19.png)
 
-Gain(FutbolOyna, Nem)      = 0.971 - 0    = 0.971
-Gain(FutbolOyna, Rüzgar)  = 0.971 - 0.8  = 0.171
+Gain(FutbolOyna, Nem)      = 0.971 - 0  = 0.971
+Gain(FutbolOyna, Rüzgar)  = 0.971 - 0.8 = 0.171
  
 Bilgi kazancı değerleri hesaplanır ve karar ağacı Nem iç düğümünde Normal ve Yüksek dallarına ulaşır bu dallarda homojenlik (tüm Nem Normal değerleri Evet, tüm Nem Yüksek değerler hayır) sağlandığı için yaprak düğümler ile karar ağacı oluşumu tamamlanır.
 

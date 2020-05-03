@@ -7,15 +7,16 @@ Destek Vektör Makineleri, temel olarak farklı sınıflara ait verileri birbiri
 
 Avantaj ve Dezavantajları
 
-- Doğrusal ve doğrusal olmayan veriler için kullanışlı bir model  
-- Çok boyutlu veriler için etkili bir modeldir.  
-- Boyut sayısı örnek sayısından fazla olduğu durumlarda da etkili bir model olarak kullanılır.  
-- Eğitim verilerini parçalara ayırdığı için bellek kullanımında çok yük getirmemektedir.  
-- Çok yönlü: Karar fonksiyonu için çok farklı çekirdek fonksiyonları (“kernel functions”)kullanılabilmektedir.  
+```diff
++ Doğrusal ve doğrusal olmayan veriler için kullanışlı bir model  
++ Çok boyutlu veriler için etkili bir modeldir.  
++ Boyut sayısı örnek sayısından fazla olduğu durumlarda da etkili bir model olarak kullanılır.  
++ Eğitim verilerini parçalara ayırdığı için bellek kullanımında çok yük getirmemektedir.  
++ Çok yönlü: Karar fonksiyonu için çok farklı çekirdek fonksiyonları (“kernel functions”)kullanılabilmektedir.  
 - Doğru çekirdeği ve parametrelerini seçmek yoğun bir hesap gerektirmekte.  
 - Veri setinde gürültü outlier varsa model etkisiz kalır ve hatalı, aynı sonuçları üretir.  
 - Model olasılık tahminini kendisi veremiyor farklı k-fold cross validation ile tahminler oluşturulabilir. 
-
+```
 
 Destek Vektör Makineleri, veri setinin doğrusal olarak ayrılabilme ve ayrılamama durumuna göre ikiye ayrılmaktadır.
 

@@ -7,14 +7,14 @@ Destek Vektör Makineleri, temel olarak farklı sınıflara ait verileri birbiri
 
 Avantaj ve Dezavantajları
 
-- Doğrusal ve doğrusal olmayan veriler için kullanışlı bir model
-- Çok boyutlu veriler için etkili bir modeldir.
-- Boyut sayısı örnek sayısından fazla olduğu durumlarda da etkili bir model olarak kullanılır.
-- Eğitim verilerini parçalara ayırdığı için bellek kullanımında çok yük getirmemektedir.
-- Çok yönlü: Karar fonksiyonu için çok farklı çekirdek fonksiyonları (“kernel functions”) kullanılabilmektedir.
-- Doğru çekirdeği ve parametrelerini seçmek yoğun bir hesap gerektirmekte.
-- Veri setinde gürültü outlier varsa model etkisiz kalır ve hatalı, aynı sonuçları üretir.
-- Model olasılık tahminini kendisi veremiyor farklı k-fold cross validation ile tahminler oluşturulabilir.
+- Doğrusal ve doğrusal olmayan veriler için kullanışlı bir model  
+- Çok boyutlu veriler için etkili bir modeldir.  
+- Boyut sayısı örnek sayısından fazla olduğu durumlarda da etkili bir model olarak kullanılır.  
+- Eğitim verilerini parçalara ayırdığı için bellek kullanımında çok yük getirmemektedir.  
+- Çok yönlü: Karar fonksiyonu için çok farklı çekirdek fonksiyonları (“kernel functions”)kullanılabilmektedir.  
+- Doğru çekirdeği ve parametrelerini seçmek yoğun bir hesap gerektirmekte.  
+- Veri setinde gürültü outlier varsa model etkisiz kalır ve hatalı, aynı sonuçları üretir.  
+- Model olasılık tahminini kendisi veremiyor farklı k-fold cross validation ile tahminler oluşturulabilir. 
 
 
 Destek Vektör Makineleri, veri setinin doğrusal olarak ayrılabilme ve ayrılamama durumuna göre ikiye ayrılmaktadır.
@@ -54,23 +54,24 @@ Gerçek yaşamda sınıflar birbiri ile daha heterojen karışmış olabiliyorla
 
 ## Matematiksel Gösterim:
 
-Hiperdüzlem H için
-w•xi +b ≥ +1 , yi =+1 iken  
-w•xi +b ≤ -1 ,  yi = –1 iken
-H1 ve H2 düzlemleri: H1: w•xi +b = +1 ;  H2: w•xi +b = –1 
-Noktaladan geçen H1 ve H2 Destek vektörleri H0 ise bu düzlemlerin medyanıdır, yani H0: w•xi +b =0
-d- = negatif en yakın noktaya en kısa mesafe
-d+= pozitif en kısa noktaya en yakın mesafe
+Hiperdüzlem H için  
+w•xi +b ≥ +1 , yi =+1 iken    
+w•xi +b ≤ -1 ,  yi = –1 iken  
+H1 ve H2 düzlemleri: H1: w•xi +b = +1 ;  H2: w•xi +b = –1  
+Noktaladan geçen H1 ve H2 Destek vektörleri H0 ise bu düzlemlerin medyanıdır.  
+>yani H0: w•xi +b =0  
+>d- = negatif en yakın noktaya en kısa mesafe  
+>d+= pozitif en kısa noktaya en yakın mesafe  
 
 
 ![](../images/svm5.png)
 
 ## Basit Örnek:
 
-Örnek olarak 
-pozitif olarak etiketli noktalarımız:   (3 1), (3 −1), (6 1) , (6 −1)
-negatif etiketli noktalarımız ise:       (1 0),  (0 1), (0 −1) , (−1 0) 
-olsun.
+Örnek olarak;   
+pozitif olarak etiketli noktalarımız:   (3 1), (3 −1), (6 1) , (6 −1)  
+negatif etiketli noktalarımız ise:       (1 0),  (0 1), (0 −1) , (−1 0) olsun.
+
 
 ![](../images/svm6.png)
 
@@ -78,33 +79,34 @@ Destek vektörleri iki farklı sınıfta birbirine en yakın olan noktalar olaca
 
 ![](../images/svm7.png)
 
-iki sınıfı ayıracak SVM düzeyi bulmayı hedeflemekteyiz veri lineer olarak ayrılabilen bir veri olduğu için lineer SVM fonksiyonu Φ()      tespit etmeyi amaçlıyoruz.
-Destek vektörleri 1 bias girdisi ile arttırılmış olarak vektörize edeceğiz.
- s1 = (1,0)  ise s˜1 = (1,0,1);    s˜2= (3,1,1);     s˜3= (3,-1,1)
+iki sınıfı ayıracak SVM düzeyi bulmayı hedeflemekteyiz veri lineer olarak ayrılabilen bir veri olduğu için lineer SVM fonksiyonu Φ() tespit etmeyi amaçlıyoruz.  
+Destek vektörleri 1 bias girdisi ile arttırılmış olarak vektörize edeceğiz.  
+s1 = (1,0)  ise s˜1 = (1,0,1);    s˜2= (3,1,1);     s˜3= (3,-1,1)  
 
 Aşağıdaki şekilde verdiğimiz SVM mimarisinde a1,a2 ve a3 değerlerini bulmak için vektörize ettiğimiz destek noktalarını negatif ve pozitif sınıflar için denklemlerini kurarız.
 
 ![](../images/svm8.png)
 
-α1Φ(s1) · Φ(s1) + α2Φ(s2) · Φ(s1) + α3Φ(s3) · Φ(s1) = −1 
-α1Φ(s1) · Φ(s2) + α2Φ(s2) · Φ(s2) + α3Φ(s3) · Φ(s2) = +1 
-α1Φ(s1) · Φ(s3) + α2Φ(s2) · Φ(s3) + α3Φ(s3) · Φ(s3) = +1
+α1Φ(s1) · Φ(s1) + α2Φ(s2) · Φ(s1) + α3Φ(s3) · Φ(s1) = −1  
+α1Φ(s1) · Φ(s2) + α2Φ(s2) · Φ(s2) + α3Φ(s3) · Φ(s2) = +1  
+α1Φ(s1) · Φ(s3) + α2Φ(s2) · Φ(s3) + α3Φ(s3) · Φ(s3) = +1  
 
-α1s˜1 · s˜1 + α2s˜2 · s˜1 + α3s˜3 · s˜1 = −1
-α1s˜1 · s˜2 + α2s˜2 · s˜2 + α3s˜3 · s˜2 = +1 
-α1s˜1 · s˜3 + α2s˜2 · s˜3 + α3s˜3 · s˜3 = +1
+α1s˜1 · s˜1 + α2s˜2 · s˜1 + α3s˜3 · s˜1 = −1  
+α1s˜1 · s˜2 + α2s˜2 · s˜2 + α3s˜3 · s˜2 = +1  
+α1s˜1 · s˜3 + α2s˜2 · s˜3 + α3s˜3 · s˜3 = +1  
 
 vektörlerin çarpımı sonrasında;
 
->Örn. Vektör çarpımı
->(a,b,c).(d,e,f) = a * d+b * e+c * f yani s˜1 · s˜2
->(1,0,1).(3,1,1) = 1 * 3+0 * 1+1 * 1=4
+>Örn. Vektör çarpımı  
+>(a,b,c).(d,e,f) = a * d+b * e+c * f yani s˜1 · s˜2  
+>(1,0,1).(3,1,1) = 1 * 3+0 * 1+1 * 1=4  
 
-2α1 + 4α2 + 4α3 = −1
-4α1 + 11α2 + 9α3 = +1
-4α1 + 9α2 + 11α3 = +1
+2α1 + 4α2 + 4α3 = −1  
+4α1 + 11α2 + 9α3 = +1  
+4α1 + 9α2 + 11α3 = +1  
 
-burada yukarıdaki denklemleri taraf tarafa topladığımızda: a1= -3.5,  a2= 0.75,  a3 = 0.75 olarak hesaplanır.
+burada yukarıdaki denklemleri taraf tarafa topladığımızda:  
+a1= -3.5,  a2= 0.75,  a3 = 0.75 olarak hesaplanır.  
 
 Şimdi bu ai değerlerin ayırıcı hiperdüzlemi nasıl etkilediğine bakalım.
 
@@ -139,8 +141,8 @@ Matematiksel Gösterim:
 
 Basit Örnek:
 
-(2 2), (2 −2), ( −2 −2), ( −2  2) pozitif etiketli
-(1 1), (1 −1), (−1 −1),  (−1  1) negatif etiketli
+(2 2), (2 −2), ( −2 −2), ( −2  2) pozitif etiketli  
+(1 1), (1 −1), (−1 −1),  (−1  1) negatif etiketli  
 doğrusal olmayan verilerimiz olsun.
 
 ![](../images/svm12.png)
@@ -149,37 +151,37 @@ veriler doğrusal olmadığından hiper düzlem tanımlamak için çekirdek tara
 
 ![](../images/svm13.png)
 
-fonksiyondan sonra pozitif ve negatif etiketli veriler sırasıyla aşağıdaki gibi olur:
+fonksiyondan sonra pozitif ve negatif etiketli veriler sırasıyla aşağıdaki gibi olur:  
 
-(2 2), (6 2), (6 6), (2 6)
+(2 2), (6 2), (6 6), (2 6)  
 (1 1), (1 −1), (−1 −1), (−1  1)
 
 ![](../images/svm14.png)
 
-Bu özellik uzayında s˜1 =(1 1) ve s˜2 = (2 2) destek vektörleridir ve aşağıdaki eşitlik kullanılarak hiper düzlem formülüne erişilir.
+Bu özellik uzayında s˜1 =(1 1) ve s˜2 = (2 2) destek vektörleridir ve aşağıdaki eşitlik kullanılarak hiper düzlem formülüne erişilir.  
 
-α1.s˜1 · s˜1 + α2.s˜2 · s˜1 = −1 
-α1.s˜1 · s˜2 + α2.s˜2 · s˜2 = +1
+α1.s˜1 · s˜1 + α2.s˜2 · s˜1 = −1   
+α1.s˜1 · s˜2 + α2.s˜2 · s˜2 = +1  
 
-3a1 + 5a2  = -1
-5a1 + 9a2 = 1
-denklemlerinin çözümünde;
+3a1 + 5a2  = -1  
+5a1 + 9a2 = 1  
+denklemlerinin çözümünde;  
 
-a1= -7 
-a2= 4  olur.
+a1= -7   
+a2= 4  olur.  
 
-Bu değerlerden sonra ayırıcı hiper düzlemin genel formülüne gelecek olursak 
+Bu değerlerden sonra ayırıcı hiper düzlemin genel formülüne gelecek olursak  
 y = wx+b denkleminde w katsayı değerinin
 
 ![](../images/svm15.png)
 
-denklemi ile 
+denklemi ile   
 
--7 (1 1 1) + 4 (2 2 1) = (1 1 -3) olduğu görülmektedir.
+-7 (1 1 1) + 4 (2 2 1) = (1 1 -3) olduğu görülmektedir.  
 
-hiper düzlemin denklemi de 
+hiper düzlemin denklemi de  
 
-y = wx + b,    w = (1 1) ve  b = −3 değerleri ile oluşturulmuş olur.
+y = wx + b,    w = (1 1) ve  b = −3 değerleri ile oluşturulmuş olur.  
 
 
 ## Kaynaklar:

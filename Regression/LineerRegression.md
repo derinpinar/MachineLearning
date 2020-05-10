@@ -32,9 +32,9 @@ y = x1w1+x2w2+x3w3+...+b
 Toplam hata oranı minimum bir orana geldi ise eğitime son verilir. Ya da belli bir iterasyon sayısına ulaşıldığında yine eğitime son verilebilir.
 Bu şekilde istenilen w1,w2. .. değerleri bulunur ve  
 
-y = w1x +b denklemi oluşturulur. 
+y = w1x + b denklemi oluşturulur. 
 
-## Basit Örnek 
+## Basit Örnek
 
 İş Tecrübesine göre maaş tahmini yapalım elimizde aşağıdaki iş tecrübeleri ve aldığı maaşlar (Bin) olsun. Bu eğitim verisi ile 1.8 yıllık bir çalışanın maaşını tahminleyelim.  
 
@@ -55,18 +55,18 @@ ilk olarak;
 
 ![](../images/lineerregression3.png)
 
-denklemimizi *1. iterasyon* için kuruyoruz.  
+denklemimizi **1. iterasyon** için kuruyoruz.  
  
 ilk iterasyonda  ağırlıklar Ɵ0 ve Ɵ1  değerleri 0, öğrenme katsayısı (learning rate (α))= 0.01 olarak alınır. 
 
 h(x) = Ɵ0 + Ɵix   
 
-h1(x1) = Ɵ0 + Ɵix1 =0 
-h2(x2) = Ɵ0 + Ɵix2 =0 
-h3(x3) = Ɵ0 + Ɵix3 =0 
-h4(x4) = Ɵ0 + Ɵix4 =0 
-h5(x5) = Ɵ0 + Ɵix5 =0 
-h6(x6) = Ɵ0 + Ɵix6 =0 
+h1(x1) = Ɵ0 + Ɵix1 =0  
+h2(x2) = Ɵ0 + Ɵix2 =0  
+h3(x3) = Ɵ0 + Ɵix3 =0  
+h4(x4) = Ɵ0 + Ɵix4 =0  
+h5(x5) = Ɵ0 + Ɵix5 =0   
+h6(x6) = Ɵ0 + Ɵix6 =0   
 
 Hesaplanan yeni Y değerlerinden gerçek Y dizindeki her noktanın farkı alınır. Sonra farkın karesi alınır ve alınan bu farkların karesi her nokta için toplanarak maliyet fonksiyonu hesaplanır. Bu değer toplam hatayı verir. 
 
@@ -127,18 +127,18 @@ Gradient descent algoritmasında yakınsama yönü türevin ters yöndeki bir do
 h(x) = 0.0315 + 0.0643x  
 
 
-Denklemimizi 2. iterasyon için kuruyoruz.  
+Denklemimizi **2. iterasyon** için kuruyoruz.  
 
 Hesaplanan ağırlıklar ile beraber doğrunun denklemi kullanılarak her X noktası için yeni Y değerleri hesaplanır. 
 
-h(x) = 0.0315 + 0.0643x 
+h(x) = 0.0315 + 0.0643x  
 
-h1(x1) = Ɵ0 + Ɵix1 = 0.0315 + 0.0643 * 1,1 = 0,10223 
-h2(x2) = Ɵ0 + Ɵix2 = 0.0315 + 0.0643 * 1,3 = 0,11509 
-h3(x3) = Ɵ0 + Ɵix3 =0.0315 + 0.0643 * 1,5 = 0,12795 
-h4(x4) = Ɵ0 + Ɵix4 =0.0315 + 0.0643 * 2 = 0,1601 
-h5(x5) = Ɵ0 + Ɵix5 =0.0315 + 0.0643 * 2,2 = 0,17296 
-h6(x6) = Ɵ0 + Ɵix6 =0.0315 + 0.0643 * 3 = 0,2244 
+h1(x1) = Ɵ0 + Ɵix1 = 0.0315 + 0.0643 * 1,1 = 0,10223   
+h2(x2) = Ɵ0 + Ɵix2 = 0.0315 + 0.0643 * 1,3 = 0,11509   
+h3(x3) = Ɵ0 + Ɵix3 =0.0315 + 0.0643 * 1,5 = 0,12795   
+h4(x4) = Ɵ0 + Ɵix4 =0.0315 + 0.0643 * 2 = 0,1601   
+h5(x5) = Ɵ0 + Ɵix5 =0.0315 + 0.0643 * 2,2 = 0,17296    
+h6(x6) = Ɵ0 + Ɵix6 =0.0315 + 0.0643 * 3 = 0,2244     
 
 ![](../images/lineerregression8.png) 
 
@@ -151,7 +151,7 @@ h6(x6) = Ɵ0 + Ɵix6 =0.0315 + 0.0643 * 3 = 0,2244
 | |4,00|0,16|14,74|
 | |3,90|0,17|13,89|
 | |4,50|0,22|18,28|
-|E(Ɵ0,Ɵ1)=|(3,6015309729+4,3468497081+4,7178012025+14,74483201+13,8908271616+18,28075536)/12 =|4.97
+|E(Ɵ0,Ɵ1)=|(3,6015+4,3468+4,7178+14,7448+13,8908+18,2807)/12 =|4.97
 
 Toplam hata 4.97 sıfırdan veya belli bir epsilon değerinden  büyük olduğu için  Θ0 ve Θ1'e göre türevler yeniden alınarak  ağırlıklar tekrar hesaplanır.  
 

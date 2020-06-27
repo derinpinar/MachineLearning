@@ -62,7 +62,7 @@ y= a1X+ a2X2  + a0
 
 En küçük karaler parabolü normal eşitliği (Bu eşitliği çoklu lineer regresyon'da da kullanmıştık.) kullanarak a0,a1 ve a2 değerlerini hesaplayalım :
 
-![](../images/multilineerregression5.png)    
+![](../images/poly5.jpeg)    
 
 matris çarpımı ile 
 

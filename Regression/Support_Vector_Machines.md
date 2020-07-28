@@ -7,8 +7,8 @@ Hata terimi bunun yerine, mutlak hatayı maksimum hata ϵ (epsilon) ile belirtil
 Modelimizin istenen doğruluğunu elde etmek için epsilonu ayarlayabiliriz. 
 Yani nesnel işlevimiz ve kısıtlarımız aşağıdaki gibidir:
 
-İndirgeme (minimize): Min(1/2 ||w||2)
-Kısıtlama (constrains): | yi  - wixi | >= €
+İndirgeme (minimize): Min(1/2 ||w||2)    
+Kısıtlama (constrains): | yi  - wixi | >= €    
 
 Grafik:  
 ![](../images/svr1.png)
